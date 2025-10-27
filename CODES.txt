@@ -86,7 +86,6 @@ scatter(real(symbols),imag(symbols),'bo');
 grid on;
 xlabel('In-phase'); ylabel('Quadrature');
 title('16-QAM Constellation');
-%simulate AWGN CHANNEL
 snr_db=20;
 rx_signal=awgn(symbols,snr_db,'measured');
 figure;
@@ -140,5 +139,6 @@ end
 decoded_data = encoded_data([3 5 6 7]);
 disp('Decoded Data:');
 disp(decoded_data);
+
 
 
